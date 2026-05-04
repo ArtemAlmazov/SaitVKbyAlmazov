@@ -4,7 +4,7 @@ menuBtn?.addEventListener('click', () => {
   const open = mobileMenu.classList.toggle('open');
   menuBtn.setAttribute('aria-expanded', String(open));
 });
-mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');menuBtn?.setAttribute('aria-expanded','false');}));
 
 // Текущая дата в шапке
 const dateEl = document.getElementById('currentDate');
